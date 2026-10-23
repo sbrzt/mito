@@ -41,7 +41,7 @@ jobs:
           out=$(dirname "$ONTOLOGY")
           file=$(basename "$ONTOLOGY")
           excludes=(--exclude "$file")
-          set -f  # keep patterns like *.png literal instead of globbing them
+          set -f
           for p in $KEEP; do excludes+=(--exclude "$p"); done
           set +f
           lode build --file "$ONTOLOGY" --read-as "$READ_AS" --out "$RUNNER_TEMP/lode" --artefact-name "${file%.*}"

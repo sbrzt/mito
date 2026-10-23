@@ -215,8 +215,8 @@ Which in-text reference pointers are linked to a mention via annotations?
         OPTIONAL { ?annotation oa:annotatedBy ?annotator . }
     }
 """@en ;
-    dc:title "The Mention Typing Ontology (MiTO)"@en ;
-    dcterms:bibliographicCitation "Matteo Guenci. The Mention Typing Ontology. Revision: 1.1.0. http://purl.org/spar/mito." ;
+    dc:title "The Mention Typing Ontology (MiTOo)"@en ;
+    dcterms:bibliographicCitation "Pride, D., Guenci, M., Docekal, M., Peroni, S., & Knoth, P. (2025, December). Identifying and classifying software mentions in full text scholarly documents. In 2025 ACM/IEEE Joint Conference on Digital Libraries (JCDL) (pp. 261-264). IEEE. DOI: https://doi.org/10.1109/JCDL67857.2025.00041" ;
     dcterms:created "2024-05-09" ;
     dcterms:issued "2024-05-09" ;
     dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
