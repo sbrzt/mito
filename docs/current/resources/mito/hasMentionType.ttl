@@ -14,7 +14,7 @@ mito:hasMentionType a owl:ObjectProperty ;
     """ ;
     rdfs:comment "The relation between a mention and the characterisation of that mention."@en ;
     rdfs:domain mito:Mention ;
-    rdfs:isDefinedBy mito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/mito> ;
     rdfs:range mito:MentionType ;
     rdfs:subPropertyOf sit:isSettingFor ;
     vs:term_status reg:statusStable .
