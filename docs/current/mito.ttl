@@ -266,7 +266,7 @@ mito:explicit a mito:MentionType,
     rdfs:comment """
 A type of mention according to which there is a direct, unambiguous, and literal naming or stating of something within a text.
     """@en ;
-    rdfs:isDefinedBy mito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/mito> ;
     vs:term_status reg:statusStable .
 
 mito:implicit a mito:MentionType,
@@ -281,7 +281,7 @@ mito:implicit a mito:MentionType,
     rdfs:comment """
 A type of mention according to which something is suggested or understood through context rather than named directly within a text.
     """@en ;
-    rdfs:isDefinedBy mito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/mito> ;
     vs:term_status reg:statusStable .
 
 mito:isMentionedBy a owl:ObjectProperty ;
@@ -292,7 +292,7 @@ mito:isMentionedBy a owl:ObjectProperty ;
         mito:isMentionedBy :my-journal-article .
     """ ;
     rdfs:comment "The relation between the two sides involved in the act of mentioning, with one entity being mentioned by the other."@en ;
-    rdfs:isDefinedBy mito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/mito> ;
     owl:inverseOf mito:mentions ;
     vs:term_status reg:statusStable .
 
@@ -304,7 +304,7 @@ mito:hasMentionType a owl:ObjectProperty ;
     """ ;
     rdfs:comment "The relation between a mention and the characterisation of that mention."@en ;
     rdfs:domain mito:Mention ;
-    rdfs:isDefinedBy mito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/mito> ;
     rdfs:range mito:MentionType ;
     rdfs:subPropertyOf sit:isSettingFor ;
     vs:term_status reg:statusStable .
@@ -317,7 +317,7 @@ mito:hasMentionedEntity a owl:ObjectProperty ;
     """ ;
     rdfs:comment "The relation between a mention and a mentioned entity."@en ;
     rdfs:domain mito:Mention ;
-    rdfs:isDefinedBy mito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/mito> ;
     rdfs:subPropertyOf sit:isSettingFor ;
     vs:term_status reg:statusStable .
 
@@ -331,7 +331,7 @@ mito:isMentionedEntityOf a owl:ObjectProperty ;
     """ ;
     rdfs:comment "The relation between a mentioned entity and a mention."@en ;
     owl:inverseOf mito:hasMentionedEntity ;
-    rdfs:isDefinedBy mito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/mito> ;
     vs:term_status reg:statusStable .
 
 mito:hasMentioningEntity a owl:ObjectProperty ;
@@ -342,7 +342,7 @@ mito:hasMentioningEntity a owl:ObjectProperty ;
     """ ;
     rdfs:comment "The relation between a mention and a mentioning entity."@en ;
     rdfs:domain mito:Mention ;
-    rdfs:isDefinedBy mito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/mito> ;
     rdfs:subPropertyOf sit:isSettingFor ;
     vs:term_status reg:statusStable .
 
@@ -356,7 +356,7 @@ mito:isMentioningEntityOf a owl:ObjectProperty ;
     """ ;
     rdfs:comment "The relation between a mentioning entity and a mention."@en ;
     owl:inverseOf mito:hasMentioningEntity ;
-    rdfs:isDefinedBy mito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/mito> ;
     vs:term_status reg:statusStable .
 
 mito:mentions a owl:ObjectProperty ;
@@ -367,13 +367,13 @@ mito:mentions a owl:ObjectProperty ;
         mito:mentions :my-software .
     """ ;
     rdfs:comment "The relation between the two sides involved in the act of mentioning, with one entity mentioning the other."@en ;
-    rdfs:isDefinedBy mito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/mito> ;
     vs:term_status reg:statusStable .
 
 sit:Situation a owl:Class ;
     rdfs:label "situation"@en ;
     rdfs:comment "A view on a set of entities. It can be seen as a _relational context_, reifying a relation."@en ;
-    rdfs:isDefinedBy sit: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/situation.owl> .
 
 mito:Mention a owl:Class ;
     rdfs:label "mention"@en ;
@@ -386,7 +386,7 @@ mito:Mention a owl:Class ;
     rdfs:comment """
 The action or an act of referring to, remarking upon, or introducing the name of a person or thing in spoken or written discourse, often incidentally and as not necessarily essential to the discussion.
 """@en ;
-    rdfs:isDefinedBy mito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/mito> ;
     rdfs:seeAlso <https://www.oed.com/dictionary/mention_n?tl=true/> ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( sit:Situation [ a owl:Restriction ;
@@ -410,12 +410,12 @@ mito:MentionType a owl:Class ;
     mito:explicit a mito:MentionType .
     """ ;
     rdfs:comment "The reified implicit or explicit characteristic of a mention."@en ;
-    rdfs:isDefinedBy mito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/mito> ;
     vs:term_status reg:statusStable .
 
 sit:isSettingFor a owl:ObjectProperty ;
     rdfs:label "is setting for"@en ;
     rdfs:comment "The relation between a situation and something that situation is a setting for."@en ;
     rdfs:domain sit:Situation ;
-    rdfs:isDefinedBy sit: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/situation.owl> .
 
