@@ -1,0 +1,16 @@
+name: Docs and release
+
+on:
+  push:
+    branches: [ main ]
+    paths: [ docs/current/mito.ttl ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  docs:
+    uses: ./.github/workflows/lode.yml
+    with:
+      ontology: docs/current/mito.ttl
