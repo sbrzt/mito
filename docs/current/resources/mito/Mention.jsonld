@@ -33,7 +33,7 @@
     ],
     "http://www.w3.org/2002/07/owl#equivalentClass": [
       {
-        "@id": "_:n5eaaa0ff152d4f389440afb3e3ea46b1b1"
+        "@id": "_:n4649dad772d04652ac12b535c14bbe53b1"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -49,7 +49,7 @@
     ]
   },
   {
-    "@id": "_:n5eaaa0ff152d4f389440afb3e3ea46b1b1",
+    "@id": "_:n4649dad772d04652ac12b535c14bbe53b1",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -60,20 +60,20 @@
             "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"
           },
           {
-            "@id": "_:n5eaaa0ff152d4f389440afb3e3ea46b1b2"
+            "@id": "_:n4649dad772d04652ac12b535c14bbe53b2"
           },
           {
-            "@id": "_:n5eaaa0ff152d4f389440afb3e3ea46b1b3"
+            "@id": "_:n4649dad772d04652ac12b535c14bbe53b3"
           },
           {
-            "@id": "_:n5eaaa0ff152d4f389440afb3e3ea46b1b4"
+            "@id": "_:n4649dad772d04652ac12b535c14bbe53b4"
           }
         ]
       }
     ]
   },
   {
-    "@id": "_:n5eaaa0ff152d4f389440afb3e3ea46b1b2",
+    "@id": "_:n4649dad772d04652ac12b535c14bbe53b2",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -90,7 +90,7 @@
     ]
   },
   {
-    "@id": "_:n5eaaa0ff152d4f389440afb3e3ea46b1b3",
+    "@id": "_:n4649dad772d04652ac12b535c14bbe53b3",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -107,7 +107,7 @@
     ]
   },
   {
-    "@id": "_:n5eaaa0ff152d4f389440afb3e3ea46b1b4",
+    "@id": "_:n4649dad772d04652ac12b535c14bbe53b4",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],

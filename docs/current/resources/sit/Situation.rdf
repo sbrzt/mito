@@ -6,7 +6,7 @@
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label xml:lang="en">situation</rdfs:label>
-    <rdfs:comment xml:lang="en">A view on a set of entities. It can be seen as a _relational context_, reifying a relation.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
+    <rdfs:comment xml:lang="en">A view on a set of entities. It can be seen as a _relational context_, reifying a relation.</rdfs:comment>
   </rdf:Description>
 </rdf:RDF>
