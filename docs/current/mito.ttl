@@ -215,7 +215,7 @@ Which in-text reference pointers are linked to a mention via annotations?
         OPTIONAL { ?annotation oa:annotatedBy ?annotator . }
     }
 """@en ;
-    dc:title "The Mention Typing Ontology (MiTOo)"@en ;
+    dc:title "The Mention Typing Ontology (MiTO)"@en ;
     dcterms:bibliographicCitation "Pride, D., Guenci, M., Docekal, M., Peroni, S., & Knoth, P. (2025, December). Identifying and classifying software mentions in full text scholarly documents. In 2025 ACM/IEEE Joint Conference on Digital Libraries (JCDL) (pp. 261-264). IEEE. DOI: https://doi.org/10.1109/JCDL67857.2025.00041" ;
     dcterms:created "2024-05-09" ;
     dcterms:issued "2024-05-09" ;
@@ -227,7 +227,7 @@ Which in-text reference pointers are linked to a mention via annotations?
     bibo:status <http://purl.org/ontology/bibo/status/published> ;
     vann:changes """
 * **v1.1.1**:
-    Added new documentation files to the repository (e.g., the `CITATION.cff` file) and refactored some components.
+Added new documentation files to the repository (e.g., the `CITATION.cff` file) and refactored some components.
 * **v1.1.0**: 
 Added new documentation, including annotation properties (e.g., `bibo:doi`, `schema:codeRepository`, etc.), term properties (e.g., `vann:example`, `vs:term_status`, etc.), exemplary competency questions with their respective SPARQL queries, and a Grafoo diagram.
 Added new named individuals `mito:explicit` and `mito:implicit` (previously only mentioned in documentation as `mito:ExplicitMention` and `mito:ImplicitMention`).
