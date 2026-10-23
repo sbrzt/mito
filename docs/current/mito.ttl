@@ -22,19 +22,18 @@ dc:date a owl:AnnotationProperty .
 
 dc:description a owl:AnnotationProperty .
 
-dc:rights a owl:AnnotationProperty .
-
 dc:title a owl:AnnotationProperty .
 
 <http://purl.org/spar/mito> a owl:Ontology ;
     dc:contributor "Sebastian Barzaghi (https://orcid.org/0000-0002-0799-1527)"^^xsd:string,
         "Silvio Peroni (https://orcid.org/0000-0003-0530-4305)"^^xsd:string ;
     dc:creator "Matteo Guenci (https://orcid.org/0009-0006-3139-1667)"^^xsd:string ;
-    dc:date "2026-08-14" ;
+    dc:date "2026-10-05" ;
+    dc:language <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     dc:description """
 The **_Mention Typing Ontology (MiTO)_** is an OWL 2 DL ontology designed to formalize the concept of mentions, which are crucial for bibliometric analysis, as they allow researchers to track references to entities (e.g., software) in scholarly communication. This ontology aims to enhance interoperability with other SPAR ontologies by providing a flexible framework for describing mentions and their characteristics.
 
-Mentions can be explicit (e.g., directly stated references in text, as when stated into an article "Dr. Johnson's groundbreaking research on climate change") or implicit (e.g., indirect references to entities or concepts, such as discussing "seminal studies in the field"). 
+Mentions can be explicit (e.g., directly stated references in text, as when stated into an article _Dr. Johnson's groundbreaking research on climate change_) or implicit (e.g., indirect references to entities or concepts, such as discussing "seminal studies in the field"). 
 
 MiTO introduces the following key concepts:
 * **Mention**, which represents the act of referring to or introducing the name of a person, entity, or concept in discourse. 
@@ -221,12 +220,14 @@ Which in-text reference pointers are linked to a mention via annotations?
     dcterms:created "2024-05-09" ;
     dcterms:issued "2024-05-09" ;
     dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified "2026-08-14" ;
+    dcterms:modified "2026-10-05" ;
     dcterms:publisher <https://ror.org/00wb4mk85> ;
     dcterms:source <https://github.com/SPAROntologies/mito/blob/master/docs/cq.md> ;
     bibo:doi "TBA" ;
     bibo:status <http://purl.org/ontology/bibo/status/published> ;
     vann:changes """
+* **v1.1.1**:
+    Added new documentation files to the repository (e.g., the `CITATION.cff` file) and refactored some components.
 * **v1.1.0**: 
 Added new documentation, including annotation properties (e.g., `bibo:doi`, `schema:codeRepository`, etc.), term properties (e.g., `vann:example`, `vs:term_status`, etc.), exemplary competency questions with their respective SPARQL queries, and a Grafoo diagram.
 Added new named individuals `mito:explicit` and `mito:implicit` (previously only mentioned in documentation as `mito:ExplicitMention` and `mito:ImplicitMention`).
@@ -235,16 +236,19 @@ Specified that `mito:Mention` is a subclass of `sit:Situation` and, as a consequ
     vann:preferredNamespacePrefix "mito"@en ;
     vann:preferredNamespaceUri "http://purl.org/spar/mito"@en ;
     rdfs:seeAlso <http://www.sparontologies.net/ontologies/mito> ;
-    owl:backwardCompatibleWith mito:2024-05-09 ;
+    owl:backwardCompatibleWith mito:2026-08-14 ;
     owl:imports <http://www.ontologydesignpatterns.org/cp/owl/situation.owl> ;
-    owl:priorVersion mito:2024-05-09 ;
-    owl:versionIRI mito:2026-08-14 ;
-    owl:versionInfo "1.1.0"^^xsd:string ;
-    foaf:logo <https://github.com/SPAROntologies/mito/blob/master/spar.png> ;
+    owl:priorVersion mito:2026-08-14 ;
+    owl:versionIRI mito:2026-10-05 ;
+    owl:versionInfo "1.1.1"^^xsd:string ;
+    foaf:logo <https://github.com/SPAROntologies/sparontologies.github.io/blob/master/static/img/spar/spar-logo.png> ;
     schema:codeRepository <https://github.com/SPAROntologies/mito> ;
     schema:image <https://github.com/SPAROntologies/mito/blob/master/docs/current/mito.png> ;
     schema:includedInDataCatalog <https://fairsharing.org/> ;
-    schema:keywords "bibliometrics"@en,
+    schema:keywords 
+        "SPAR Ontologies"@en ,
+        "Semantic Publishing and referencing Ontologies"@en ,
+        "bibliometrics"@en,
         "scholarly mentions"@en,
         "scholarly publishing"@en,
         "scientometrics"@en,
@@ -298,7 +302,7 @@ mito:hasMentionType a owl:ObjectProperty ;
     :my-mention a mito:Mention ;
         mito:hasMentionType mito:explicit .
     """ ;
-    rdfs:comment "The implicit or explicit characterisation of the mention it is describing."@en ;
+    rdfs:comment "The relation between a mention and the characterisation of that mention."@en ;
     rdfs:domain mito:Mention ;
     rdfs:isDefinedBy mito: ;
     rdfs:range mito:MentionType ;
@@ -317,6 +321,19 @@ mito:hasMentionedEntity a owl:ObjectProperty ;
     rdfs:subPropertyOf sit:isSettingFor ;
     vs:term_status reg:statusStable .
 
+mito:isMentionedEntityOf a owl:ObjectProperty ;
+    rdfs:label "is mentioned entity of"@en ;
+    vann:example """
+    :my-mentioned-entity 
+        mito:isMentionedEntityOf :my-mention .
+
+    :my-mention a mito:Mention .
+    """ ;
+    rdfs:comment "The relation between a mentioned entity and a mention."@en ;
+    owl:inverseOf mito:hasMentionedEntity ;
+    rdfs:isDefinedBy mito: ;
+    vs:term_status reg:statusStable .
+
 mito:hasMentioningEntity a owl:ObjectProperty ;
     rdfs:label "has mentioning entity"@en ;
     vann:example """
@@ -327,6 +344,19 @@ mito:hasMentioningEntity a owl:ObjectProperty ;
     rdfs:domain mito:Mention ;
     rdfs:isDefinedBy mito: ;
     rdfs:subPropertyOf sit:isSettingFor ;
+    vs:term_status reg:statusStable .
+
+mito:isMentioningEntityOf a owl:ObjectProperty ;
+    rdfs:label "is mentioning entity of"@en ;
+    vann:example """
+    :my-mentioning-entity 
+        mito:isMentioningEntityOf :my-mention .
+
+    :my-mention a mito:Mention .
+    """ ;
+    rdfs:comment "The relation between a mentioning entity and a mention."@en ;
+    owl:inverseOf mito:hasMentioningEntity ;
+    rdfs:isDefinedBy mito: ;
     vs:term_status reg:statusStable .
 
 mito:mentions a owl:ObjectProperty ;
@@ -342,7 +372,7 @@ mito:mentions a owl:ObjectProperty ;
 
 sit:Situation a owl:Class ;
     rdfs:label "situation"@en ;
-    rdfs:comment "A view on a set of entities. It can be seen as a 'relational context', reifying a relation."@en ;
+    rdfs:comment "A view on a set of entities. It can be seen as a _relational context_, reifying a relation."@en ;
     rdfs:isDefinedBy sit: .
 
 mito:Mention a owl:Class ;
