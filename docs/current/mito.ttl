@@ -225,14 +225,7 @@ Which in-text reference pointers are linked to a mention via annotations?
     dcterms:source <https://github.com/SPAROntologies/mito/blob/master/docs/cq.md> ;
     bibo:doi "TBA" ;
     bibo:status <http://purl.org/ontology/bibo/status/published> ;
-    vann:changes """
-* **v1.1.1**:
-Added new documentation files to the repository (e.g., the `CITATION.cff` file) and refactored some components.
-* **v1.1.0**: 
-Added new documentation, including annotation properties (e.g., `bibo:doi`, `schema:codeRepository`, etc.), term properties (e.g., `vann:example`, `vs:term_status`, etc.), exemplary competency questions with their respective SPARQL queries, and a Grafoo diagram.
-Added new named individuals `mito:explicit` and `mito:implicit` (previously only mentioned in documentation as `mito:ExplicitMention` and `mito:ImplicitMention`).
-Specified that `mito:Mention` is a subclass of `sit:Situation` and, as a consequence, its properties as subproperties of `sit:isSettingFor`.
-    """@en ;
+    vann:changes <https://github.com/SPAROntologies/mito/blob/master/CHANGELOG.md> ;
     vann:preferredNamespacePrefix "mito"@en ;
     vann:preferredNamespaceUri "http://purl.org/spar/mito"@en ;
     rdfs:seeAlso <http://www.sparontologies.net/ontologies/mito> ;
