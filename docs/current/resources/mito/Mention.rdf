@@ -7,27 +7,46 @@
    xmlns:vann="http://purl.org/vocab/vann/"
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
-  <rdf:Description rdf:nodeID="n04036e4c6f394b2c929659de60f39a2ab5">
-    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
-    <rdf:rest rdf:nodeID="n04036e4c6f394b2c929659de60f39a2ab6"/>
+  <rdf:Description rdf:nodeID="n5eaaa0ff152d4f389440afb3e3ea46b1b2">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://purl.org/spar/mito/hasMentionType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n04036e4c6f394b2c929659de60f39a2ab6">
-    <rdf:rest rdf:nodeID="n04036e4c6f394b2c929659de60f39a2ab7"/>
-    <rdf:first rdf:nodeID="n04036e4c6f394b2c929659de60f39a2ab2"/>
+  <rdf:Description rdf:nodeID="n5eaaa0ff152d4f389440afb3e3ea46b1b8">
+    <rdf:first rdf:nodeID="n5eaaa0ff152d4f389440afb3e3ea46b1b4"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n5eaaa0ff152d4f389440afb3e3ea46b1b4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/mito/hasMentioningEntity"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n5eaaa0ff152d4f389440afb3e3ea46b1b1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="n5eaaa0ff152d4f389440afb3e3ea46b1b5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n5eaaa0ff152d4f389440afb3e3ea46b1b7">
+    <rdf:rest rdf:nodeID="n5eaaa0ff152d4f389440afb3e3ea46b1b8"/>
+    <rdf:first rdf:nodeID="n5eaaa0ff152d4f389440afb3e3ea46b1b3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n5eaaa0ff152d4f389440afb3e3ea46b1b3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/mito/hasMentionedEntity"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/mito/Mention">
-    <owl:equivalentClass rdf:nodeID="n04036e4c6f394b2c929659de60f39a2ab1"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/mito/"/>
-    <rdfs:seeAlso rdf:resource="https://www.oed.com/dictionary/mention_n?tl=true/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     <rdfs:comment xml:lang="en">
 The action or an act of referring to, remarking upon, or introducing the name of a person or thing in spoken or written discourse, often incidentally and as not necessarily essential to the discussion.
 </rdfs:comment>
-    <rdfs:label xml:lang="en">mention</rdfs:label>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:seeAlso rdf:resource="https://www.oed.com/dictionary/mention_n?tl=true/"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/mito"/>
+    <owl:equivalentClass rdf:nodeID="n5eaaa0ff152d4f389440afb3e3ea46b1b1"/>
     <skos:note xml:lang="en">
 Originally: the action of calling to mind or commemorating something in speech or writing.
     </skos:note>
+    <rdfs:label xml:lang="en">mention</rdfs:label>
     <vann:example>
     :my-mention a mito:Mention ;
         mito:hasMentioningEntity :my-mentioning-entity ;
@@ -35,31 +54,12 @@ Originally: the action of calling to mind or commemorating something in speech o
         mito:hasMentionType mito:explicit .
     </vann:example>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n04036e4c6f394b2c929659de60f39a2ab3">
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-    <owl:onProperty rdf:resource="http://purl.org/spar/mito/hasMentionedEntity"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  <rdf:Description rdf:nodeID="n5eaaa0ff152d4f389440afb3e3ea46b1b5">
+    <rdf:rest rdf:nodeID="n5eaaa0ff152d4f389440afb3e3ea46b1b6"/>
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n04036e4c6f394b2c929659de60f39a2ab7">
-    <rdf:first rdf:nodeID="n04036e4c6f394b2c929659de60f39a2ab3"/>
-    <rdf:rest rdf:nodeID="n04036e4c6f394b2c929659de60f39a2ab8"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n04036e4c6f394b2c929659de60f39a2ab4">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://purl.org/spar/mito/hasMentioningEntity"/>
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n04036e4c6f394b2c929659de60f39a2ab2">
-    <owl:onProperty rdf:resource="http://purl.org/spar/mito/hasMentionType"/>
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n04036e4c6f394b2c929659de60f39a2ab1">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:intersectionOf rdf:nodeID="n04036e4c6f394b2c929659de60f39a2ab5"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n04036e4c6f394b2c929659de60f39a2ab8">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:nodeID="n04036e4c6f394b2c929659de60f39a2ab4"/>
+  <rdf:Description rdf:nodeID="n5eaaa0ff152d4f389440afb3e3ea46b1b6">
+    <rdf:first rdf:nodeID="n5eaaa0ff152d4f389440afb3e3ea46b1b2"/>
+    <rdf:rest rdf:nodeID="n5eaaa0ff152d4f389440afb3e3ea46b1b7"/>
   </rdf:Description>
 </rdf:RDF>
