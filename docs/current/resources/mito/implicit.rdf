@@ -6,13 +6,9 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/mito/implicit">
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/mito"/>
     <rdfs:comment xml:lang="en">
 A type of mention according to which something is suggested or understood through context rather than named directly within a text.
     </rdfs:comment>
-    <rdfs:label xml:lang="en">implicit</rdfs:label>
-    <rdf:type rdf:resource="http://purl.org/spar/mito/MentionType"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <vann:example>
     :my-mention a mito:Mention ;
         mito:hasMentioningEntity :my-mentioning-entity ;
@@ -20,5 +16,9 @@ A type of mention according to which something is suggested or understood throug
         mito:hasMentionType mito:implicit .
     </vann:example>
     <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/mito"/>
+    <rdfs:label xml:lang="en">implicit</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/mito/MentionType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
 </rdf:RDF>
