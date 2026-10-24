@@ -240,7 +240,7 @@ Which in-text reference pointers are linked to a mention via annotations?
     schema:includedInDataCatalog <https://fairsharing.org/> ;
     schema:keywords 
         "SPAR Ontologies"@en ,
-        "Semantic Publishing and referencing Ontologies"@en ,
+        "Semantic Publishing and Referencing Ontologies"@en ,
         "bibliometrics"@en,
         "scholarly mentions"@en,
         "scholarly publishing"@en,
