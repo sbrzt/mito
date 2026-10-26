@@ -1,5 +1,17 @@
 [
   {
+    "@id": "http://purl.org/dc/elements/1.1/date",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/elements/1.1/title",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
     "@id": "http://purl.org/spar/mito/mentions",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -24,6 +36,122 @@
       {
         "@language": "en",
         "@value": "mentions"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/mito/hasMentioningEntity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-mention a mito:Mention ;\n        mito:hasMentioningEntity :my-mentioning-entity .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The relation between a mention and a mentioning entity."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/spar/mito/Mention"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/mito"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has mentioning entity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/mito/implicit",
+    "@type": [
+      "http://purl.org/spar/mito/MentionType",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-mention a mito:Mention ;\n        mito:hasMentioningEntity :my-mentioning-entity ;\n        mito:hasMentionedEntity :my-mentioned-entity ;\n        mito:hasMentionType mito:implicit .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "\nA type of mention according to which something is suggested or understood through context rather than named directly within a text.\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/mito"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "implicit"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/elements/1.1/contributor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/mito/MentionType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-mention a mito:Mention ;\n        mito:hasMentionType mito:explicit .\n\n    mito:explicit a mito:MentionType .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The reified implicit or explicit characteristic of a mention."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/mito"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "mention type"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -67,6 +195,79 @@
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
         "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/elements/1.1/creator",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/elements/1.1/description",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/mito/isMentioningEntityOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-mentioning-entity \n        mito:isMentioningEntityOf :my-mention .\n\n    :my-mention a mito:Mention .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The relation between a mentioning entity and a mention."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/mito"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is mentioning entity of"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/spar/mito/hasMentioningEntity"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A view on a set of entities. It can be seen as a _relational context_, reifying a relation."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "situation"
       }
     ]
   },
@@ -119,9 +320,31 @@
     ]
   },
   {
-    "@id": "http://purl.org/dc/elements/1.1/creator",
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The relation between a situation and something that situation is a setting for."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is setting for"
+      }
     ]
   },
   {
@@ -168,40 +391,6 @@
     ]
   },
   {
-    "@id": "http://purl.org/spar/mito/implicit",
-    "@type": [
-      "http://purl.org/spar/mito/MentionType",
-      "http://www.w3.org/2002/07/owl#NamedIndividual"
-    ],
-    "http://purl.org/vocab/vann/example": [
-      {
-        "@value": "\n    :my-mention a mito:Mention ;\n        mito:hasMentioningEntity :my-mentioning-entity ;\n        mito:hasMentionedEntity :my-mentioned-entity ;\n        mito:hasMentionType mito:implicit .\n    "
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "\nA type of mention according to which something is suggested or understood through context rather than named directly within a text.\n    "
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.org/spar/mito"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "implicit"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@id": "http://purl.org/linked-data/registry#statusStable"
-      }
-    ]
-  },
-  {
     "@id": "http://purl.org/spar/mito/Mention",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
@@ -235,7 +424,7 @@
     ],
     "http://www.w3.org/2002/07/owl#equivalentClass": [
       {
-        "@id": "_:n19183589887c44e68666f66e7f58e989b1"
+        "@id": "_:nbadb7f1f116c4e08a2b40be1d927d971b1"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -251,7 +440,7 @@
     ]
   },
   {
-    "@id": "_:n19183589887c44e68666f66e7f58e989b1",
+    "@id": "_:nbadb7f1f116c4e08a2b40be1d927d971b1",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -262,20 +451,20 @@
             "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"
           },
           {
-            "@id": "_:n19183589887c44e68666f66e7f58e989b2"
+            "@id": "_:nbadb7f1f116c4e08a2b40be1d927d971b2"
           },
           {
-            "@id": "_:n19183589887c44e68666f66e7f58e989b3"
+            "@id": "_:nbadb7f1f116c4e08a2b40be1d927d971b3"
           },
           {
-            "@id": "_:n19183589887c44e68666f66e7f58e989b4"
+            "@id": "_:nbadb7f1f116c4e08a2b40be1d927d971b4"
           }
         ]
       }
     ]
   },
   {
-    "@id": "_:n19183589887c44e68666f66e7f58e989b2",
+    "@id": "_:nbadb7f1f116c4e08a2b40be1d927d971b2",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -292,7 +481,7 @@
     ]
   },
   {
-    "@id": "_:n19183589887c44e68666f66e7f58e989b3",
+    "@id": "_:nbadb7f1f116c4e08a2b40be1d927d971b3",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -309,7 +498,7 @@
     ]
   },
   {
-    "@id": "_:n19183589887c44e68666f66e7f58e989b4",
+    "@id": "_:nbadb7f1f116c4e08a2b40be1d927d971b4",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -526,7 +715,7 @@
       },
       {
         "@language": "en",
-        "@value": "Semantic Publishing and referencing Ontologies"
+        "@value": "Semantic Publishing and Referencing Ontologies"
       },
       {
         "@language": "en",
@@ -547,146 +736,6 @@
       {
         "@language": "en",
         "@value": "semantic publishing"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/mito/isMentioningEntityOf",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://purl.org/vocab/vann/example": [
-      {
-        "@value": "\n    :my-mentioning-entity \n        mito:isMentioningEntityOf :my-mention .\n\n    :my-mention a mito:Mention .\n    "
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The relation between a mentioning entity and a mention."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.org/spar/mito"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "is mentioning entity of"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://purl.org/spar/mito/hasMentioningEntity"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@id": "http://purl.org/linked-data/registry#statusStable"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/elements/1.1/description",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A view on a set of entities. It can be seen as a _relational context_, reifying a relation."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "situation"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/elements/1.1/contributor",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/elements/1.1/title",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/mito/MentionType",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/vocab/vann/example": [
-      {
-        "@value": "\n    :my-mention a mito:Mention ;\n        mito:hasMentionType mito:explicit .\n\n    mito:explicit a mito:MentionType .\n    "
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The reified implicit or explicit characteristic of a mention."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.org/spar/mito"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "mention type"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@id": "http://purl.org/linked-data/registry#statusStable"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The relation between a situation and something that situation is a setting for."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "is setting for"
       }
     ]
   },
@@ -716,55 +765,6 @@
       {
         "@language": "en",
         "@value": "explicit"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@id": "http://purl.org/linked-data/registry#statusStable"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/elements/1.1/date",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/mito/hasMentioningEntity",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://purl.org/vocab/vann/example": [
-      {
-        "@value": "\n    :my-mention a mito:Mention ;\n        mito:hasMentioningEntity :my-mentioning-entity .\n    "
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The relation between a mention and a mentioning entity."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://purl.org/spar/mito/Mention"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.org/spar/mito"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has mentioning entity"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
