@@ -29,7 +29,6 @@ dc:title a owl:AnnotationProperty .
         "Silvio Peroni (https://orcid.org/0000-0003-0530-4305)"^^xsd:string ;
     dc:creator "Matteo Guenci (https://orcid.org/0009-0006-3139-1667)"^^xsd:string ;
     dc:date "2026-10-05" ;
-    dc:language <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     dc:description """
 The **_Mention Typing Ontology (MiTO)_** is an OWL 2 DL ontology designed to formalize the concept of mentions, which are crucial for bibliometric analysis, as they allow researchers to track references to entities (e.g., software) in scholarly communication. This ontology aims to enhance interoperability with other SPAR ontologies by providing a flexible framework for describing mentions and their characteristics.
 
@@ -238,6 +237,7 @@ Which in-text reference pointers are linked to a mention via annotations?
     schema:codeRepository <https://github.com/SPAROntologies/mito> ;
     schema:image <https://github.com/SPAROntologies/mito/blob/master/docs/current/mito.png> ;
     schema:includedInDataCatalog <https://fairsharing.org/> ;
+    dc:language <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     schema:keywords 
         "SPAR Ontologies"@en ,
         "Semantic Publishing and Referencing Ontologies"@en ,
